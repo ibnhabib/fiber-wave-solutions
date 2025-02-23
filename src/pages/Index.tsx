@@ -1,7 +1,8 @@
-
 import { Wifi, Cable, Network, Server } from "lucide-react";
 import { HeroSection } from "@/components/HeroSection";
 import { ServiceCard } from "@/components/ServiceCard";
+import { WhyChooseUs } from "@/components/WhyChooseUs";
+import { FloatingButtons } from "@/components/FloatingButtons";
 
 const services = [
   {
@@ -67,6 +68,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+      <WhyChooseUs />
+      <FloatingButtons />
     </div>
   );
 };

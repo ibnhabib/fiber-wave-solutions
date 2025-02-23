@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -94,8 +95,25 @@
   * {
     @apply border-border;
   }
-
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@keyframes fiber {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%) translateY(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%) translateY(-20px);
+  }
+}
+
+.animate-fiber {
+  animation: fiber 4s linear infinite;
 }
