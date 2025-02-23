@@ -1,10 +1,16 @@
 
+import { useEffect } from "react";
 import { Button } from "./ui/button";
 import { Wifi } from "lucide-react";
+import { renderCanvas } from "./ui/canvas";
 
 export function HeroSection() {
+  useEffect(() => {
+    renderCanvas();
+  }, []);
+
   return (
-    <section className="relative py-20 overflow-hidden bg-gradient-to-b from-white to-slate-50">
+    <section className="relative py-20 overflow-hidden">
       <div className="container px-4 mx-auto">
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <div className="flex items-center justify-center mb-6 space-x-2 animate-fade-in">
@@ -31,25 +37,10 @@ export function HeroSection() {
           </div>
         </div>
       </div>
-      {/* Enhanced fiber optic animation background */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="fiber-lines absolute inset-0 opacity-30">
-          {[...Array(30)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full transform animate-fiber"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                width: `${Math.random() * 300 + 200}px`,
-                animationDelay: `${Math.random() * 3}s`,
-                animationDuration: `${Math.random() * 3 + 2}s`,
-                opacity: 0.7
-              }}
-            />
-          ))}
-        </div>
-      </div>
+      <canvas
+        className="pointer-events-none absolute inset-0 -z-10"
+        id="canvas"
+      ></canvas>
     </section>
   );
 }
