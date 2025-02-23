@@ -18,7 +18,11 @@ export function HeroSection() {
             Same-Day WiFi Setup, NETGEAR Extender Installation, and Reliable Fiber Repairs
           </p>
           <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 justify-center">
-            <Button size="lg" className="animate-fade-in hover:bg-secondary/90">
+            <Button 
+              size="lg" 
+              className="animate-fade-in hover:bg-secondary/90"
+              onClick={() => window.location.href = 'tel:+971569811332'}
+            >
               Get Free Consultation Today
             </Button>
             <Button size="lg" variant="outline" className="animate-fade-in">
@@ -27,19 +31,20 @@ export function HeroSection() {
           </div>
         </div>
       </div>
-      {/* Fiber optic animation background */}
+      {/* Enhanced fiber optic animation background */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="fiber-lines absolute inset-0 opacity-10">
-          {[...Array(20)].map((_, i) => (
+        <div className="fiber-lines absolute inset-0 opacity-30">
+          {[...Array(30)].map((_, i) => (
             <div
               key={i}
-              className="absolute h-0.5 bg-cyan-400 rounded-full transform animate-fiber"
+              className="absolute h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full transform animate-fiber"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
-                width: `${Math.random() * 200 + 100}px`,
-                animationDelay: `${Math.random() * 4}s`,
-                animationDuration: `${Math.random() * 4 + 3}s`
+                width: `${Math.random() * 300 + 200}px`,
+                animationDelay: `${Math.random() * 3}s`,
+                animationDuration: `${Math.random() * 3 + 2}s`,
+                opacity: 0.7
               }}
             />
           ))}

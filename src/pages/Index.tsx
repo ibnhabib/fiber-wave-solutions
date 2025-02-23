@@ -1,4 +1,5 @@
-import { Wifi, Cable, Network, Server } from "lucide-react";
+
+import { Wifi, Cable, Network, Server, Camera, Phone } from "lucide-react";
 import { HeroSection } from "@/components/HeroSection";
 import { ServiceCard } from "@/components/ServiceCard";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
@@ -45,6 +46,28 @@ const services = [
       "Professional cable management",
     ],
   },
+  {
+    icon: Camera,
+    title: "CCTV Installation",
+    description: "Professional security camera solutions for home and business",
+    highlights: [
+      "HD & 4K camera installation",
+      "Remote monitoring setup",
+      "Night vision systems",
+      "Motion detection configuration",
+    ],
+  },
+  {
+    icon: Phone,
+    title: "VOIP Solutions",
+    description: "Advanced voice over IP telephony systems",
+    highlights: [
+      "Business phone system setup",
+      "Cloud PBX integration",
+      "Call center solutions",
+      "Video conferencing setup",
+    ],
+  },
 ];
 
 const Index = () => {
@@ -61,7 +84,7 @@ const Index = () => {
               Comprehensive networking solutions delivered by certified local technicians
             </p>
           </div>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (
               <ServiceCard key={index} {...service} />
             ))}
@@ -72,6 +95,6 @@ const Index = () => {
       <FloatingButtons />
     </div>
   );
-};
+}
 
 export default Index;
