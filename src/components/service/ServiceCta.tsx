@@ -17,7 +17,7 @@ export function ServiceCta() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="gap-2" asChild>
-              <a href="tel:+971501234567">
+              <a href="tel:+971569811332">
                 <PhoneCall className="h-5 w-5" />
                 Call Now
               </a>
