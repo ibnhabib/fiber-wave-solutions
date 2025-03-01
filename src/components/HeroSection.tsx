@@ -5,7 +5,7 @@ export function HeroSection() {
       <div className="container px-4 mx-auto">
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <div className="flex items-center justify-center mb-6 space-x-2 animate-fade-in">
-            <Wifi className="w-10 h-10 text-primary" />
+            <Wifi className="w-7 h-7 text-primary" />
             <span className="text-lg font-medium text-primary">Ethernet Installation Services</span>
           </div>
           <h1 className="mb-4 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl animate-slide-up">
