@@ -6,9 +6,14 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import ServicePage from "./pages/ServicePage";
 import { localBusinessSchema } from "./utils/schema";
 import { useEffect } from "react";
+import NetworkInstallation from "./pages/NetworkInstallation";
+import FiberOptic from "./pages/FiberOptic";
+import WifiSetup from "./pages/WifiSetup";
+import Ethernet from "./pages/Ethernet";
+import CCTV from "./pages/CCTV";
+import VOIP from "./pages/VOIP";
 
 const queryClient = new QueryClient();
 
@@ -32,12 +37,12 @@ const App = () => {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/network-installation" element={<ServicePage />} />
-            <Route path="/fiber-optic" element={<ServicePage />} />
-            <Route path="/wifi-setup" element={<ServicePage />} />
-            <Route path="/ethernet" element={<ServicePage />} />
-            <Route path="/cctv" element={<ServicePage />} />
-            <Route path="/voip" element={<ServicePage />} />
+            <Route path="/network-installation" element={<NetworkInstallation />} />
+            <Route path="/fiber-optic" element={<FiberOptic />} />
+            <Route path="/wifi-setup" element={<WifiSetup />} />
+            <Route path="/ethernet" element={<Ethernet />} />
+            <Route path="/cctv" element={<CCTV />} />
+            <Route path="/voip" element={<VOIP />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

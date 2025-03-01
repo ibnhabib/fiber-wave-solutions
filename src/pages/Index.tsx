@@ -6,6 +6,7 @@ import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { FloatingButtons } from "@/components/FloatingButtons";
 import { Navbar } from "@/components/Navbar";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const services = [
   {
@@ -60,7 +61,6 @@ const services = [
       "HD & 4K camera installation",
       "Remote monitoring setup",
       "Night vision systems",
-      "Motion detection configuration",
     ],
     url: "/cctv"
   },
@@ -72,13 +72,39 @@ const services = [
       "Business phone system setup",
       "Cloud PBX integration",
       "Call center solutions",
-      "Video conferencing setup",
     ],
     url: "/voip"
   },
 ];
 
 const Index = () => {
+  // SEO metadata for home page
+  useEffect(() => {
+    document.title = "Technical Services - Network Installation & WiFi Setup in Al Ain & Abu Dhabi";
+    
+    // Update meta description
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", "Professional network installation, fiber optic, WiFi setup, ethernet, CCTV, and VOIP services in Al Ain & Abu Dhabi. Expert technical solutions for homes and businesses.");
+    } else {
+      metaDescription = document.createElement('meta');
+      metaDescription.setAttribute("name", "description");
+      metaDescription.setAttribute("content", "Professional network installation, fiber optic, WiFi setup, ethernet, CCTV, and VOIP services in Al Ain & Abu Dhabi. Expert technical solutions for homes and businesses.");
+      document.head.appendChild(metaDescription);
+    }
+    
+    // Update meta keywords
+    let metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) {
+      metaKeywords.setAttribute("content", "network cabling, CAT 6 cable installation, internet cable installation, wifi installation, fiber optic, CCTV, VOIP, Al Ain, Abu Dhabi");
+    } else {
+      metaKeywords = document.createElement('meta');
+      metaKeywords.setAttribute("name", "keywords");
+      metaKeywords.setAttribute("content", "network cabling, CAT 6 cable installation, internet cable installation, wifi installation, fiber optic, CCTV, VOIP, Al Ain, Abu Dhabi");
+      document.head.appendChild(metaKeywords);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
