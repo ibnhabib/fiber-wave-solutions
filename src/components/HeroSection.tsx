@@ -1,5 +1,8 @@
+
 import { Button } from "./ui/button";
 import { Wifi } from "lucide-react";
+import { Link } from "react-router-dom";
+
 export function HeroSection() {
   return <section className="relative py-24 pt-32 overflow-hidden bg-gradient-to-b from-white to-slate-50">
       <div className="container px-4 mx-auto">
@@ -18,9 +21,11 @@ export function HeroSection() {
             <Button size="lg" className="animate-fade-in hover:bg-primary/90" onClick={() => window.location.href = 'tel:+971569811332'}>
               Get Free Consultation Today
             </Button>
-            <Button size="lg" variant="outline" className="animate-fade-in">
-              View Our Services
-            </Button>
+            <Link to="/our-services">
+              <Button size="lg" variant="outline" className="animate-fade-in">
+                View Our Services
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

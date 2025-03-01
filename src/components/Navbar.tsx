@@ -28,6 +28,9 @@ export function Navbar() {
             <Link to="/" className="text-slate-700 hover:text-primary font-medium transition-colors">
               Home
             </Link>
+            <Link to="/our-services" className="text-slate-700 hover:text-primary font-medium transition-colors">
+              Our Services
+            </Link>
             <Link to="/network-installation" className="text-slate-700 hover:text-primary font-medium transition-colors">
               Network Installation
             </Link>
@@ -70,6 +73,9 @@ export function Navbar() {
           <nav className="flex flex-col space-y-3 py-4">
             <Link to="/" className="text-slate-700 hover:text-primary font-medium py-2 transition-colors" onClick={toggleMenu}>
               Home
+            </Link>
+            <Link to="/our-services" className="text-slate-700 hover:text-primary font-medium py-2 transition-colors" onClick={toggleMenu}>
+              Our Services
             </Link>
             <Link to="/network-installation" className="text-slate-700 hover:text-primary font-medium py-2 transition-colors" onClick={toggleMenu}>
               Network Installation

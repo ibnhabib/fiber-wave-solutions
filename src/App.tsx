@@ -14,6 +14,7 @@ import WifiSetup from "./pages/WifiSetup";
 import Ethernet from "./pages/Ethernet";
 import CCTV from "./pages/CCTV";
 import VOIP from "./pages/VOIP";
+import OurServices from "./pages/OurServices";
 
 const queryClient = new QueryClient();
 
@@ -43,6 +44,7 @@ const App = () => {
             <Route path="/ethernet" element={<Ethernet />} />
             <Route path="/cctv" element={<CCTV />} />
             <Route path="/voip" element={<VOIP />} />
+            <Route path="/our-services" element={<OurServices />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
