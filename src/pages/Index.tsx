@@ -4,6 +4,8 @@ import { HeroSection } from "@/components/HeroSection";
 import { ServiceCard } from "@/components/ServiceCard";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { FloatingButtons } from "@/components/FloatingButtons";
+import { Navbar } from "@/components/Navbar";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -15,6 +17,7 @@ const services = [
       "Structured cabling solutions",
       "Network infrastructure setup",
     ],
+    url: "/network-installation"
   },
   {
     icon: Cable,
@@ -25,6 +28,7 @@ const services = [
       "Underground cable repairs",
       "24/7 emergency support",
     ],
+    url: "/fiber-optic"
   },
   {
     icon: Wifi,
@@ -35,6 +39,7 @@ const services = [
       "NETGEAR extender optimization",
       "IoT device integration",
     ],
+    url: "/wifi-setup"
   },
   {
     icon: Server,
@@ -45,6 +50,7 @@ const services = [
       "Smart home configuration",
       "Professional cable management",
     ],
+    url: "/ethernet"
   },
   {
     icon: Camera,
@@ -56,6 +62,7 @@ const services = [
       "Night vision systems",
       "Motion detection configuration",
     ],
+    url: "/cctv"
   },
   {
     icon: Phone,
@@ -67,12 +74,14 @@ const services = [
       "Call center solutions",
       "Video conferencing setup",
     ],
+    url: "/voip"
   },
 ];
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-white">
+      <Navbar />
       <HeroSection />
       <section className="py-20 bg-white">
         <div className="container px-4 mx-auto">
@@ -86,7 +95,9 @@ const Index = () => {
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (
-              <ServiceCard key={index} {...service} />
+              <Link to={service.url} key={index} className="group">
+                <ServiceCard {...service} />
+              </Link>
             ))}
           </div>
         </div>

@@ -11,8 +11,8 @@ function Feature({ icon: Icon, title, description }: FeatureProps) {
   return (
     <div className="flex items-start p-4 space-x-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
       <div className="flex-shrink-0">
-        <div className="p-3 bg-secondary/10 rounded-lg">
-          <Icon className="w-6 h-6 text-secondary" />
+        <div className="p-3 bg-primary/10 rounded-lg">
+          <Icon className="w-6 h-6 text-primary" />
         </div>
       </div>
       <div>

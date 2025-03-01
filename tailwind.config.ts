@@ -22,11 +22,11 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#64748b",
+          DEFAULT: "#1e88e5", // Changed from green to blue
           foreground: "#ffffff",
         },
         secondary: {
-          DEFAULT: "#0891b2",
+          DEFAULT: "#0d47a1", // Deeper blue
           foreground: "#ffffff",
         },
         card: {
@@ -34,7 +34,7 @@ export default {
           foreground: "#1e293b",
         },
         accent: {
-          DEFAULT: "#0891b2",
+          DEFAULT: "#1e88e5", // Changed from cyan to blue
           foreground: "#ffffff",
         },
       },

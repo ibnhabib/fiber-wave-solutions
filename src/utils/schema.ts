@@ -21,6 +21,23 @@ export const localBusinessSchema = {
     }
   ],
   "priceRange": "$$",
-  "servesCuisine": "Network Installation, Fiber Optic Services, WiFi Setup",
-  "telephone": "+971-XX-XXXXXXX"
+  "telephone": "+971569811332",
+  "sameAs": [
+    "https://www.facebook.com/technicalservices",
+    "https://www.instagram.com/technicalservices"
+  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "08:00",
+    "closes": "20:00"
+  }
 };

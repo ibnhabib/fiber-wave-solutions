@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import ServicePage from "./pages/ServicePage";
 import { localBusinessSchema } from "./utils/schema";
 import { useEffect } from "react";
 
@@ -31,6 +32,12 @@ const App = () => {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/network-installation" element={<ServicePage />} />
+            <Route path="/fiber-optic" element={<ServicePage />} />
+            <Route path="/wifi-setup" element={<ServicePage />} />
+            <Route path="/ethernet" element={<ServicePage />} />
+            <Route path="/cctv" element={<ServicePage />} />
+            <Route path="/voip" element={<ServicePage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
