@@ -125,8 +125,8 @@ const ServicePage = () => {
       metaDescription.setAttribute("content", service.metaDescription);
     } else {
       metaDescription = document.createElement('meta');
-      metaDescription.name = "description";
-      metaDescription.content = service.metaDescription;
+      metaDescription.setAttribute("name", "description");
+      metaDescription.setAttribute("content", service.metaDescription);
       document.head.appendChild(metaDescription);
     }
     
@@ -136,8 +136,8 @@ const ServicePage = () => {
       metaKeywords.setAttribute("content", service.metaKeywords);
     } else {
       metaKeywords = document.createElement('meta');
-      metaKeywords.name = "keywords";
-      metaKeywords.content = service.metaKeywords;
+      metaKeywords.setAttribute("name", "keywords");
+      metaKeywords.setAttribute("content", service.metaKeywords);
       document.head.appendChild(metaKeywords);
     }
   }, [service]);
