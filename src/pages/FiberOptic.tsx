@@ -1,120 +1,55 @@
 
-import React, { useEffect } from "react";
-import { Cable } from "lucide-react";
-import { WhyChooseUs } from "@/components/WhyChooseUs";
-import { FloatingButtons } from "@/components/FloatingButtons";
-import { Button } from "@/components/ui/button";
-import { Navbar } from "@/components/Navbar";
+import React from 'react';
+import { ServicePage } from '@/components/service/ServicePage';
 
 const FiberOptic = () => {
-  // SEO metadata
-  useEffect(() => {
-    document.title = "Expert Fiber Optic Installation & Repair Services in Al Ain & Abu Dhabi";
-    
-    // Update meta description
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute("content", "Professional fiber optic installations, repairs and 24/7 emergency support for residential and commercial properties across Al Ain & Abu Dhabi.");
-    } else {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute("name", "description");
-      metaDescription.setAttribute("content", "Professional fiber optic installations, repairs and 24/7 emergency support for residential and commercial properties across Al Ain & Abu Dhabi.");
-      document.head.appendChild(metaDescription);
-    }
-    
-    // Update meta keywords
-    let metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (metaKeywords) {
-      metaKeywords.setAttribute("content", "fiber optic installation, fiber cable repair, underground fiber, fiber optic solutions, Al Ain, Abu Dhabi, internet cable installation");
-    } else {
-      metaKeywords = document.createElement('meta');
-      metaKeywords.setAttribute("name", "keywords");
-      metaKeywords.setAttribute("content", "fiber optic installation, fiber cable repair, underground fiber, fiber optic solutions, Al Ain, Abu Dhabi, internet cable installation");
-      document.head.appendChild(metaKeywords);
-    }
-  }, []);
+  const content = [
+    "Our fiber optic solutions provide the highest speed and most reliable connectivity available in Al Ain and Abu Dhabi. We specialize in fiber optic installations for both residential and commercial properties, ensuring you have access to lightning-fast internet and data transfer capabilities.",
+    "Our expert technicians are trained in the latest fiber optic technologies and installation methods. We handle everything from initial planning and design to installation, testing, and maintenance of your fiber optic network infrastructure.",
+    "With 24/7 emergency support, we're always available to address any issues that may arise with your fiber optic connections, ensuring minimal downtime and maximum reliability for your critical communications."
+  ];
+
+  const features = [
+    "High-speed fiber optic cable installation for residential and commercial buildings",
+    "Fiber to the home (FTTH) and fiber to the premises (FTTP) solutions",
+    "Fiber optic cable splicing and termination with precision equipment",
+    "Detailed testing and certification of all fiber installations",
+    "Underground fiber optic cable installation and repairs",
+    "Integration with existing network infrastructure",
+    "Fiber optic network maintenance and troubleshooting",
+    "24/7 emergency support for critical connectivity issues"
+  ];
+
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Fiber Optic Solutions",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Technical Services",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Al Ain",
+        "addressRegion": "Abu Dhabi",
+        "addressCountry": "UAE"
+      }
+    },
+    "serviceType": "Fiber Optic Installation",
+    "areaServed": ["Al Ain", "Abu Dhabi", "UAE"],
+    "description": "Expert fiber optic installations and repairs for residential and commercial properties in Al Ain and Abu Dhabi. 24/7 emergency support and professional installation services."
+  };
 
   return (
-    <div className="min-h-screen bg-white pt-16">
-      <Navbar />
-      
-      {/* Hero Section */}
-      <section className="py-20 bg-slate-50">
-        <div className="container px-4 mx-auto">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="flex items-center justify-center mb-6">
-              <Cable className="w-10 h-10 text-primary" />
-            </div>
-            <h1 className="text-4xl font-bold text-slate-900 mb-6">Fiber Optic Solutions</h1>
-            <p className="text-xl text-slate-600 mb-8">Expert fiber optic installations and repairs in Al Ain & Abu Dhabi</p>
-            <Button 
-              size="lg" 
-              className="animate-fade-in"
-              onClick={() => window.location.href = 'tel:+971569811332'}
-            >
-              Get Free Consultation
-            </Button>
-          </div>
-        </div>
-      </section>
-      
-      {/* Content Section */}
-      <section className="py-16">
-        <div className="container px-4 mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="md:col-span-2">
-              <h2 className="text-2xl font-bold text-slate-900 mb-6">Expert Fiber Optic Solutions in Al Ain & Abu Dhabi</h2>
-              <p className="text-slate-600 mb-6">
-                Our fiber optic solutions provide the fastest and most reliable connectivity options available in Al Ain and Abu Dhabi. We handle everything from initial installations to emergency repairs with precision and care. Our team of certified fiber optic technicians can diagnose and resolve fiber issues quickly, minimizing downtime for your home or business. We provide 24/7 emergency support for critical situations and maintain the highest standards in fiber optic installation and repair.
-              </p>
-              <p className="text-slate-600 mb-6">
-                Our team of certified technicians brings years of experience and expertise to every project. We serve both residential and commercial clients throughout Al Ain and Abu Dhabi with prompt, professional service.
-              </p>
-              <p className="text-slate-600 mb-8">
-                Contact us today for a free consultation and experience the difference that professional technical services can make for your property.
-              </p>
-              <Button 
-                size="lg" 
-                className="mb-8"
-                onClick={() => window.location.href = 'tel:+971569811332'}
-              >
-                Call Us Now
-              </Button>
-            </div>
-            <div>
-              <div className="bg-slate-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-slate-900 mb-4">Our Services Include:</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <span className="mr-2 mt-1 h-2 w-2 rounded-full bg-primary flex-shrink-0" />
-                    <span className="text-slate-600">Residential & commercial installations</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2 mt-1 h-2 w-2 rounded-full bg-primary flex-shrink-0" />
-                    <span className="text-slate-600">Underground cable repairs</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2 mt-1 h-2 w-2 rounded-full bg-primary flex-shrink-0" />
-                    <span className="text-slate-600">24/7 emergency support</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2 mt-1 h-2 w-2 rounded-full bg-primary flex-shrink-0" />
-                    <span className="text-slate-600">Fast response times</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2 mt-1 h-2 w-2 rounded-full bg-primary flex-shrink-0" />
-                    <span className="text-slate-600">Certified fiber optic technicians</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <WhyChooseUs />
-      <FloatingButtons />
-    </div>
+    <ServicePage
+      title="Fiber Optic Solutions"
+      description="Expert fiber optic installations and repairs with 24/7 emergency support for residential and commercial properties in Al Ain and Abu Dhabi."
+      metaDescription="Professional fiber optic installations and repairs in Al Ain and Abu Dhabi. Our expert technicians provide residential and commercial fiber solutions with 24/7 emergency support."
+      metaKeywords="fiber optic, fiber cable installation, FTTH, fiber to the home, fiber optic repairs, high-speed internet, Al Ain, Abu Dhabi, network cabling"
+      content={content}
+      features={features}
+      imageUrl="/placeholder.svg"
+      schemaData={schemaData}
+    />
   );
 };
 

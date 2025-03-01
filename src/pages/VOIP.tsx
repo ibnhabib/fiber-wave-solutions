@@ -1,120 +1,55 @@
 
-import React, { useEffect } from "react";
-import { Phone } from "lucide-react";
-import { WhyChooseUs } from "@/components/WhyChooseUs";
-import { FloatingButtons } from "@/components/FloatingButtons";
-import { Button } from "@/components/ui/button";
-import { Navbar } from "@/components/Navbar";
+import React from 'react';
+import { ServicePage } from '@/components/service/ServicePage';
 
 const VOIP = () => {
-  // SEO metadata
-  useEffect(() => {
-    document.title = "Professional VOIP & Business Phone System Solutions in Al Ain & Abu Dhabi";
-    
-    // Update meta description
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute("content", "Expert business phone system setup, cloud PBX integration and call center solutions for companies in Al Ain & Abu Dhabi.");
-    } else {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute("name", "description");
-      metaDescription.setAttribute("content", "Expert business phone system setup, cloud PBX integration and call center solutions for companies in Al Ain & Abu Dhabi.");
-      document.head.appendChild(metaDescription);
-    }
-    
-    // Update meta keywords
-    let metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (metaKeywords) {
-      metaKeywords.setAttribute("content", "VOIP installation, business phone systems, cloud PBX, video conferencing, Al Ain, Abu Dhabi, call center solutions");
-    } else {
-      metaKeywords = document.createElement('meta');
-      metaKeywords.setAttribute("name", "keywords");
-      metaKeywords.setAttribute("content", "VOIP installation, business phone systems, cloud PBX, video conferencing, Al Ain, Abu Dhabi, call center solutions");
-      document.head.appendChild(metaKeywords);
-    }
-  }, []);
+  const content = [
+    "Our VOIP solutions provide advanced voice over IP telephony systems for businesses throughout Al Ain and Abu Dhabi. We design and implement reliable, cost-effective phone systems that leverage internet connectivity to deliver enhanced communications capabilities.",
+    "Our experienced technicians are skilled in configuring a wide range of VOIP equipment and services, from simple small business setups to comprehensive enterprise-grade solutions with advanced features and call center capabilities.",
+    "We ensure your VOIP system integrates seamlessly with your existing network infrastructure while providing the reliability, call quality, and features your business needs to communicate effectively with clients and colleagues."
+  ];
+
+  const features = [
+    "Complete business phone system setup and configuration",
+    "Cloud PBX integration for flexible, scalable telephony",
+    "Call center and IVR (Interactive Voice Response) solutions",
+    "Mobile integration for remote work capabilities",
+    "HD voice quality with proper QoS (Quality of Service) configuration",
+    "Conference calling and video conferencing setup",
+    "Voicemail to email and fax to email services",
+    "Detailed call reporting and analytics"
+  ];
+
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "VOIP Solutions",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Technical Services",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Al Ain",
+        "addressRegion": "Abu Dhabi",
+        "addressCountry": "UAE"
+      }
+    },
+    "serviceType": "VOIP Installation",
+    "areaServed": ["Al Ain", "Abu Dhabi", "UAE"],
+    "description": "Advanced VOIP and telephony solutions for businesses in Al Ain and Abu Dhabi. Business phone system setup, cloud PBX integration, and call center solutions."
+  };
 
   return (
-    <div className="min-h-screen bg-white pt-16">
-      <Navbar />
-      
-      {/* Hero Section */}
-      <section className="py-20 bg-slate-50">
-        <div className="container px-4 mx-auto">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="flex items-center justify-center mb-6">
-              <Phone className="w-10 h-10 text-primary" />
-            </div>
-            <h1 className="text-4xl font-bold text-slate-900 mb-6">VOIP Solutions</h1>
-            <p className="text-xl text-slate-600 mb-8">Advanced voice over IP telephony systems in Al Ain & Abu Dhabi</p>
-            <Button 
-              size="lg" 
-              className="animate-fade-in"
-              onClick={() => window.location.href = 'tel:+971569811332'}
-            >
-              Get Free Consultation
-            </Button>
-          </div>
-        </div>
-      </section>
-      
-      {/* Content Section */}
-      <section className="py-16">
-        <div className="container px-4 mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="md:col-span-2">
-              <h2 className="text-2xl font-bold text-slate-900 mb-6">Expert VOIP Solutions in Al Ain & Abu Dhabi</h2>
-              <p className="text-slate-600 mb-6">
-                Our VOIP solutions provide modern communication systems for businesses in Al Ain and Abu Dhabi. We set up advanced business phone systems that leverage internet connectivity for cost-effective and feature-rich communications. Our technicians can integrate cloud PBX systems, configure call center solutions, and set up video conferencing capabilities. Our VOIP installations help businesses reduce communication costs while enhancing functionality and reliability.
-              </p>
-              <p className="text-slate-600 mb-6">
-                Our team of certified technicians brings years of experience and expertise to every project. We serve both residential and commercial clients throughout Al Ain and Abu Dhabi with prompt, professional service.
-              </p>
-              <p className="text-slate-600 mb-8">
-                Contact us today for a free consultation and experience the difference that professional technical services can make for your property.
-              </p>
-              <Button 
-                size="lg" 
-                className="mb-8"
-                onClick={() => window.location.href = 'tel:+971569811332'}
-              >
-                Call Us Now
-              </Button>
-            </div>
-            <div>
-              <div className="bg-slate-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-slate-900 mb-4">Our Services Include:</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <span className="mr-2 mt-1 h-2 w-2 rounded-full bg-primary flex-shrink-0" />
-                    <span className="text-slate-600">Business phone system setup</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2 mt-1 h-2 w-2 rounded-full bg-primary flex-shrink-0" />
-                    <span className="text-slate-600">Cloud PBX integration</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2 mt-1 h-2 w-2 rounded-full bg-primary flex-shrink-0" />
-                    <span className="text-slate-600">Call center solutions</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2 mt-1 h-2 w-2 rounded-full bg-primary flex-shrink-0" />
-                    <span className="text-slate-600">Video conferencing setup</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2 mt-1 h-2 w-2 rounded-full bg-primary flex-shrink-0" />
-                    <span className="text-slate-600">Cost-effective communication</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <WhyChooseUs />
-      <FloatingButtons />
-    </div>
+    <ServicePage
+      title="VOIP Solutions"
+      description="Advanced voice over IP telephony systems with business phone setup and call center solutions in Al Ain and Abu Dhabi."
+      metaDescription="Professional VOIP and telephony solutions for businesses in Al Ain and Abu Dhabi. We provide business phone system setup, cloud PBX integration, and comprehensive call center solutions."
+      metaKeywords="VOIP, voice over IP, business phone system, cloud PBX, call center solutions, telephony, Al Ain, Abu Dhabi, phone installation"
+      content={content}
+      features={features}
+      imageUrl="/placeholder.svg"
+      schemaData={schemaData}
+    />
   );
 };
 
