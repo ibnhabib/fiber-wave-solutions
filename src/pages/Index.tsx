@@ -1,3 +1,4 @@
+
 import { Wifi, Cable, Network, Server, Camera, Phone } from "lucide-react";
 import { HeroSection } from "@/components/HeroSection";
 import { ServiceCard } from "@/components/ServiceCard";
@@ -6,7 +7,6 @@ import { FloatingButtons } from "@/components/FloatingButtons";
 import { Navbar } from "@/components/Navbar";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
-import { DemoBackgroundPaths } from "@/components/DemoBackgroundPaths";
 
 const services = [
   {
@@ -78,9 +78,11 @@ const services = [
 ];
 
 const Index = () => {
+  // SEO metadata for home page
   useEffect(() => {
     document.title = "Technical Services - Network Installation & WiFi Setup in Al Ain & Abu Dhabi";
     
+    // Update meta description
     let metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute("content", "Professional network installation, fiber optic, WiFi setup, ethernet, CCTV, and VOIP services in Al Ain & Abu Dhabi. Expert technical solutions for homes and businesses.");
@@ -91,6 +93,7 @@ const Index = () => {
       document.head.appendChild(metaDescription);
     }
     
+    // Update meta keywords
     let metaKeywords = document.querySelector('meta[name="keywords"]');
     if (metaKeywords) {
       metaKeywords.setAttribute("content", "network cabling, CAT 6 cable installation, internet cable installation, wifi installation, fiber optic, CCTV, VOIP, Al Ain, Abu Dhabi");
@@ -105,7 +108,6 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      <DemoBackgroundPaths />
       <HeroSection />
       <section className="py-20 bg-white">
         <div className="container px-4 mx-auto">
