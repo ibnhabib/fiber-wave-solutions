@@ -47,7 +47,7 @@ const FiberOptic = () => {
       metaKeywords="fiber optic, fiber cable installation, FTTH, fiber to the home, fiber optic repairs, high-speed internet, Al Ain, Abu Dhabi, network cabling"
       content={content}
       features={features}
-      imageUrl="https://cdn.pixabay.com/photo/2019/08/19/07/45/fiber-optic-4415454_1280.webp"
+      imageUrl="https://pixabay.com/get/g0315c4ccdeb29fa53f4f3822f95aaffbd53903d402fff06324abe5a81fe7ee6836ef68330df05f8bd3b142c9ead5a5d448c344aa6599dd61605bd993e85407c2_1280.jpg"
       schemaData={schemaData}
     />
   );
