@@ -47,7 +47,7 @@ const WifiSetup = () => {
       metaKeywords="wifi installation, wireless network setup, NETGEAR extender, mesh wifi, wifi coverage, Al Ain, Abu Dhabi, home networking, internet installation"
       content={content}
       features={features}
-      imageUrl="/placeholder.svg"
+      imageUrl="https://images.unsplash.com/photo-1531765408077-9a1f85f90df1?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=webp"
       schemaData={schemaData}
     />
   );

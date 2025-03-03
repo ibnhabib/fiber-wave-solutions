@@ -47,7 +47,7 @@ const Ethernet = () => {
       metaKeywords="ethernet installation, home networking, structured cabling, smart home, high-speed internet, cable management, Al Ain, Abu Dhabi, network cabling"
       content={content}
       features={features}
-      imageUrl="/placeholder.svg"
+      imageUrl="https://cdn.pixabay.com/photo/2016/01/25/14/05/internet-1161027_1280.webp"
       schemaData={schemaData}
     />
   );

@@ -47,7 +47,7 @@ const VOIP = () => {
       metaKeywords="VOIP, voice over IP, business phone system, cloud PBX, call center solutions, telephony, Al Ain, Abu Dhabi, phone installation"
       content={content}
       features={features}
-      imageUrl="/placeholder.svg"
+      imageUrl="https://cdn.pixabay.com/photo/2016/03/09/09/22/telephone-1245827_1280.webp"
       schemaData={schemaData}
     />
   );
