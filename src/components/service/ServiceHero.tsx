@@ -14,7 +14,12 @@ export function ServiceHero({ title, description, imageUrl }: ServiceHeroProps) 
       <div className="absolute inset-0 fiber-lines"></div>
       <div 
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${imageUrl})`, opacity: 0.25 }}
+        style={{ 
+          backgroundImage: `url(${imageUrl})`, 
+          opacity: 0.25,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover'
+        }}
       ></div>
       <div className="container mx-auto px-4 relative z-20">
         <div className="max-w-3xl mx-auto">
