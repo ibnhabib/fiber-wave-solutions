@@ -1,10 +1,8 @@
-
 import { Button } from "./ui/button";
 import { Wifi } from "lucide-react";
 import { Link } from "react-router-dom";
-
 export function HeroSection() {
-  return <section className="relative py-24 pt-32 overflow-hidden bg-gradient-to-b from-white to-slate-50">
+  return <section className="relative pt-32 overflow-hidden bg-gradient-to-b from-white to-slate-50 py-[49px]">
       <div className="container px-4 mx-auto">
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <div className="flex items-center justify-center mb-6 space-x-2 animate-fade-in">
@@ -22,7 +20,7 @@ export function HeroSection() {
               Get Free Consultation Today
             </Button>
             <Link to="/our-services">
-              <Button size="lg" variant="outline" className="animate-fade-in">
+              <Button size="lg" variant="outline" className="animate-fade-in rounded-none">
                 View Our Services
               </Button>
             </Link>
