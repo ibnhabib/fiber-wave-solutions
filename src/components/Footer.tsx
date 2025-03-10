@@ -58,13 +58,12 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-bold text-slate-900 mb-4">Working Hours</h3>
             <ul className="space-y-2">
-              <li className="text-slate-600">Monday: 8:00 AM - 8:00 PM</li>
-              <li className="text-slate-600">Tuesday: 8:00 AM - 8:00 PM</li>
-              <li className="text-slate-600">Wednesday: 8:00 AM - 8:00 PM</li>
-              <li className="text-slate-600">Thursday: 8:00 AM - 8:00 PM</li>
-              <li className="text-slate-600">Friday: 8:00 AM - 8:00 PM</li>
-              <li className="text-slate-600">Saturday: 8:00 AM - 8:00 PM</li>
-              <li className="text-slate-600">Sunday: 8:00 AM - 8:00 PM</li>
+              <li className="text-slate-600">Monday: 8:00 AM - 5:00 PM</li>
+              <li className="text-slate-600">Tuesday: 8:00 AM - 5:00 PM</li>
+              <li className="text-slate-600">Wednesday: 8:00 AM - 5:00 PM</li>
+              <li className="text-slate-600">Thursday: 8:00 AM - 5:00 PM</li>
+              <li className="text-slate-600">Friday: 8:00 AM - 5:00 PM</li>
+              <li className="text-slate-600">Saturday: 8:00 AM - 5:00 PM</li>              
             </ul>
           </div>
         </div>
