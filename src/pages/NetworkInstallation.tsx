@@ -47,7 +47,7 @@ const NetworkInstallation = () => {
       metaKeywords="network installation, CAT 6 cable installation, structured cabling, network infrastructure, Al Ain, Abu Dhabi, network cabling, internet cable installation"
       content={content}
       features={features}
-      imageUrl="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=webp"
+      imageUrl="https://images.pexels.com/photos/442150/pexels-photo-442150.jpeg"
       schemaData={schemaData}
     />
   );
