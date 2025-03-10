@@ -100,33 +100,38 @@
   }
 }
 
-/* Keep animation classes but remove fiber animation */
-@keyframes slide-up {
-  from {
+@keyframes fiber {
+  0% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateX(-100%) translateY(0) rotate(-5deg) scaleY(1);
+    filter: hue-rotate(0deg) brightness(1.2);
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  25% {
+    opacity: 0.8;
+    transform: translateX(-50%) translateY(-10px) rotate(-2.5deg) scaleY(1.1);
+    filter: hue-rotate(90deg) brightness(1.5);
   }
-}
-
-@keyframes fade-in {
-  from {
+  75% {
+    opacity: 0.8;
+    transform: translateX(50%) translateY(-5px) rotate(2.5deg) scaleY(0.9);
+    filter: hue-rotate(180deg) brightness(1.2);
+  }
+  100% {
     opacity: 0;
-  }
-  to {
-    opacity: 1;
+    transform: translateX(100%) translateY(-20px) rotate(5deg) scaleY(1);
+    filter: hue-rotate(360deg) brightness(1);
   }
 }
 
-.animate-slide-up {
-  animation: slide-up 0.5s ease-out forwards;
+.animate-fiber {
+  animation: fiber 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
-.animate-fade-in {
-  animation: fade-in 0.5s ease-out forwards;
+.fiber-lines {
+  background: 
+    radial-gradient(circle at 50% 50%, rgba(30, 136, 229, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 100% 0%, rgba(13, 71, 161, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 0% 100%, rgba(30, 136, 229, 0.05) 0%, transparent 50%);
 }
 
 /* Add margin for the fixed navbar */
