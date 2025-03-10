@@ -20,7 +20,7 @@ export function HeroSection() {
               Get Free Consultation Today
             </Button>
             <Link to="/our-services">
-              <Button size="lg" variant="outline" className="animate-fade-in rounded-none">
+              <Button size="lg" variant="outline" className="animate-fade-in">
                 View Our Services
               </Button>
             </Link>
