@@ -5,6 +5,7 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { FloatingButtons } from "@/components/FloatingButtons";
 import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -129,6 +130,7 @@ const Index = () => {
         </div>
       </section>
       <WhyChooseUs />
+      <Footer />
       <FloatingButtons />
     </div>
   );

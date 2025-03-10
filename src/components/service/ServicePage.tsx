@@ -6,6 +6,7 @@ import { ServiceHero } from './ServiceHero';
 import { ServiceContent } from './ServiceContent';
 import { ServiceFeatures } from './ServiceFeatures';
 import { ServiceCta } from './ServiceCta';
+import { Footer } from '@/components/Footer';
 
 interface ServicePageProps {
   title: string;
@@ -83,6 +84,7 @@ export function ServicePage({
       <ServiceContent content={content} />
       <ServiceFeatures title="Key Features & Benefits" features={features} />
       <ServiceCta />
+      <Footer />
       <FloatingButtons />
     </div>
   );

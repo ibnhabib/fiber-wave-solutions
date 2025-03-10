@@ -1,10 +1,10 @@
-
 import React, { useEffect } from 'react';
 import { Wifi, Cable, Network, Server, Camera, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Navbar } from "@/components/Navbar";
 import { ServiceCard } from "@/components/ServiceCard";
 import { FloatingButtons } from "@/components/FloatingButtons";
+import { Footer } from "@/components/Footer";
 
 const services = [
   {
@@ -76,11 +76,9 @@ const services = [
 ];
 
 const OurServices = () => {
-  // SEO metadata
   useEffect(() => {
     document.title = "Our Services - Technical Solutions in Al Ain & Abu Dhabi";
     
-    // Update meta description
     let metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute("content", "Explore our comprehensive technical services including network installation, fiber optic solutions, WiFi setup, ethernet cabling, CCTV installation, and VOIP services in Al Ain & Abu Dhabi.");
@@ -91,7 +89,6 @@ const OurServices = () => {
       document.head.appendChild(metaDescription);
     }
     
-    // Update meta keywords
     let metaKeywords = document.querySelector('meta[name="keywords"]');
     if (metaKeywords) {
       metaKeywords.setAttribute("content", "technical services, network installation, fiber optic solutions, WiFi setup, ethernet cabling, CCTV installation, VOIP services, Al Ain, Abu Dhabi");
@@ -107,7 +104,6 @@ const OurServices = () => {
     <div className="min-h-screen bg-white">
       <Navbar />
       
-      {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-b from-white to-slate-50">
         <div className="container px-4 mx-auto">
           <div className="max-w-3xl mx-auto text-center">
@@ -121,7 +117,6 @@ const OurServices = () => {
         </div>
       </section>
       
-      {/* Services Section */}
       <section className="py-16 bg-white">
         <div className="container px-4 mx-auto">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -134,7 +129,6 @@ const OurServices = () => {
         </div>
       </section>
 
-      {/* Summary Section */}
       <section className="py-16 bg-slate-50">
         <div className="container px-4 mx-auto">
           <div className="max-w-3xl mx-auto">
@@ -156,6 +150,7 @@ const OurServices = () => {
         </div>
       </section>
 
+      <Footer />
       <FloatingButtons />
     </div>
   );
