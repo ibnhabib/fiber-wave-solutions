@@ -98,7 +98,7 @@ export function Navbar() {
             <Button 
               size="sm" 
               className="mt-4 w-full"
-              onClick={() => window.location.href = 'tel:+971569811332'}
+              onClick={() => window.location.href = 'tel:+971564836102'}
             >
               Call Now
             </Button>
