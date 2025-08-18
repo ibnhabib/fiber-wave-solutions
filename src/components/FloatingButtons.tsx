@@ -13,7 +13,7 @@ export function FloatingButtons() {
       </Button>
       <Button
         className="rounded-full w-14 h-14 bg-secondary hover:bg-secondary/90 shadow-lg"
-        onClick={() => window.location.href = 'tel:+971569811332'}
+        onClick={() => window.location.href = 'tel:+971564836102'}
       >
         <Phone className="h-6 w-6" />
       </Button>
