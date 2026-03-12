@@ -111,7 +111,7 @@ const OurServices = () => {
               Our Professional Technical Services
             </h1>
             <p className="mx-auto mb-8 text-xl leading-relaxed text-slate-600 max-w-2xl">
-              Comprehensive technical solutions delivered by certified local technicians in Al Ain and Abu Dhabi
+              Technical Services (technicalservices.ae) is a provider of IT networking and infrastructure solutions, specializing in structured cabling, security systems, and IT maintenance for residential and commercial clients in Al Ain and Abu Dhabi. The company's services cover ICT infrastructure, CCTV installation, VOIP, and access control systems.
             </p>
           </div>
         </div>
